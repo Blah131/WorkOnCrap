@@ -6,11 +6,12 @@
       padding: 0 20px;
       font-family: 'Noto Serif', serif;
       }
+      /*This colors title of all text*/
       p, h1, h2, h3, a, ul{
         margin: 0;
         padding: 0;
         text-decoration: none;
-        color: #222
+        color: #200
       }
       /* nav & footer styles */
       nav {
@@ -35,6 +36,7 @@
       nav h1{
         font-size: 3em;
       }
+      /*bolder*/
       nav p, nav a{
         color: #777;
         font-weight: 300;
