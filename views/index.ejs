@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head.ejs')    %>
+<%- include('./partials/head.ejs') %>
 
 <body>
 
-    
+<%- include('./partials/nav.ejs') %>
 
-
-<%- include('./partials/nav.ejs')    %>
-  
-
-
-  <div class="blogs content">
+  <div class="courses content"> <!-- Updated class from blogs to courses -->
     <h2>Course Content</h2>
 
-
-    <% if (blogs.length > 0) { %>
-        <% blogs.forEach(blog => { %>
-          <a class="single" href="/blogs/<%= blog._id %>">
-            <h3 class = "title"><%= blog.title%></h3>
-            <p class="snippet"><%= blog.snippet %></p>
+    <% if (courses.length > 0) { %> <!-- Changed blogs to courses -->
+        <% courses.forEach(course => { %> <!-- Changed blog to course -->
+          <a class="single" href="/courses/<%= course._id %>"> <!-- Changed blogs to courses -->
+            <h3 class="title"><%= course.title %></h3> <!-- Changed blog to course -->
+            <p class="description"><%= course.description %></p> <!-- Changed snippet to description -->
           </a>
         <% }) %>
         
     <% } else { %>
-      <p>There are no blogs to display</p>
+      <p>There are no courses to display</p> <!-- Changed blogs to courses -->
     <% } %>
 
   </div>
 
-  <%- include('./partials/footer.ejs')    %>
+  <%- include('./partials/footer.ejs') %>
 
 </body>
 </html>
+

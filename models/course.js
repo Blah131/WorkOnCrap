@@ -1,21 +1,21 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const blogSchema = new Schema({
+const courseSchema = new Schema({
     title: {
         type: String,
         required: true
     },
-    snippet: {
+    description: {  // Changed snippet to description
         type: String,
         required: true
     },
-    body: {
+    duration: {  // Changed body to duration
         type: String,
         required: true
     }
 }, { timestamps: true });
 
-const Blog = mongoose.model('Courses', blogSchema);
-module.exports = Blog;
+const Course = mongoose.model('Course', courseSchema);  // Changed model name to Course
+module.exports = Course;
 
