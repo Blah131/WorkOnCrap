@@ -56,6 +56,45 @@ app.get('/blogs', (req, res) => {
         });
 });
 
+
+
+
+
+
+
+
+// Route to get the edit form for a specific blog post <NEW
+app.get('/blogs/:id/edit', (req, res) => {
+    const id = req.params.id;
+    Blog.findById(id)
+        .then(result => {
+            res.render('edit-blog', { title: 'Edit Blog', blog: result });
+        })
+        .catch(err => {
+            console.log(err);
+        });
+});
+
+// Route to handle the update request <NEW
+app.post('/blogs/:id', (req, res) => {
+    const id = req.params.id;
+    Blog.findByIdAndUpdate(id, req.body)
+        .then(result => {
+            res.redirect('/blogs/' + id);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+});
+
+
+
+
+
+
+
+
+
 app.post('/blogs', (req, res) => {
     const blog = new Blog(req.body);
 

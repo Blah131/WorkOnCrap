@@ -11,6 +11,11 @@
             <p><%=blog.body %></p>
         </div>
         <a class="delete" data-doc="<%= blog._id %>">delete</a>
+
+        <a href="/blogs/<%= blog._id %>/edit" class="edit-button">Edit Blog</a> <!-- Added Edit button -->
+
+
+
     </div>
 
     <%- include("./partials/footer.ejs") %>  
