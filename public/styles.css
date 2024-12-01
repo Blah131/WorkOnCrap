@@ -59,7 +59,7 @@ h3 {
     display: block;
     margin: 40px 0;
     padding-left: 30px;
-    border-left: 6px solid crimson;
+    
 }
 .courses a:hover h3 { /* Changed from .blogs to .courses */
     color: crimson;
@@ -118,7 +118,7 @@ textarea {
 
 /* about page styles */
 .about-page .content {
-    background-color: #6646da;
+    background-color: #bca9ff;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -138,3 +138,90 @@ textarea {
 .edit-button:hover {
     background-color: #005f5f;
 }
+
+
+
+
+
+
+
+/* Styles for the header container */
+.header-container {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 20px; /* Add some padding */
+    display: flex;
+    justify-content: space-between; /* Space out the elements */
+    align-items: center; /* Center align the items */
+}
+
+.header-container .site-title h1,
+.header-container .site-title p,
+.header-container ul li a {
+    color: white; /* Ensure all text within the container is white */
+}
+
+.header-container ul {
+    display: flex;
+    list-style-type: none; /* Remove default list styling */
+}
+
+.header-container ul li {
+    margin-left: 20px; /* Add space between navigation items */
+}
+
+.header-container ul li a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Table styles */
+.courses-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .courses-table th, .courses-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .courses-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+  .courses-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .courses-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Change view button color*/
+  .view-button {
+    text-decoration: none;
+    color: white;
+    background-color: #d1d1d1;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+  }
+  
+  
+  
+  .view-button:hover, .edit-button:hover, .delete-button:hover {
+    opacity: 0.8;
+  }
+  
