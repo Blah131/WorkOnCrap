@@ -1,12 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const Course = require('./models/course'); // Changed from Blog to Course
+const Course = require('./models/course'); 
 
 // express app
 const app = express();
 
-// connect to mongodb
+// connect to mongodb 
+// DO NOT UNDER AN CIRCUMSTANCE CHANGE THE CONST dbURI! Or give out the password. Seriously.
 const dbURI = 'mongodb+srv://netbinja:Work5678@cluster0.1xlo7.mongodb.net/note-dots?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(dbURI)
     .then((result) => app.listen(3002))
@@ -22,7 +23,7 @@ app.use(morgan('dev'));
 
 // routes
 app.get('/', (req, res) => {
-    res.redirect('/courses'); // Changed from blogs to courses
+    res.redirect('/courses'); 
 });
 
 app.get('/about', (req, res) => {
@@ -31,13 +32,13 @@ app.get('/about', (req, res) => {
 
 // course routes
 app.get('/courses/create', (req, res) => {
-    res.render('create-course', { title: 'Create a new Course' }); // Changed view name
+    res.render('create-course', { title: 'Create a new Course' }); 
 });
 
 app.get('/courses', (req, res) => {
     Course.find().sort({ createdAt: -1 })
         .then((result) => {
-            res.render('index', { title: 'All Courses', courses: result }); // Changed context
+            res.render('index', { title: 'All Courses', courses: result }); 
         })
         .catch((err) => {
             console.log(err);
@@ -49,7 +50,7 @@ app.get('/courses/:id/edit', (req, res) => {
     const id = req.params.id;
     Course.findById(id)
         .then(result => {
-            res.render('edit-course', { title: 'Edit Course', course: result }); // Changed view name and context
+            res.render('edit-course', { title: 'Edit Course', course: result }); 
         })
         .catch(err => {
             console.log(err);
@@ -69,7 +70,7 @@ app.post('/courses/:id', (req, res) => {
 });
 
 app.post('/courses', (req, res) => {
-    const course = new Course(req.body); // Changed from blog to course
+    const course = new Course(req.body); 
 
     course.save()
         .then((result) => {
@@ -94,7 +95,7 @@ app.get('/courses/:id', (req, res) => {
 app.delete('/courses/:id', (req, res) => {
     const id = req.params.id;
 
-    Course.findByIdAndDelete(id) // Changed from Blog to Course
+    Course.findByIdAndDelete(id) 
         .then((result) => {
             res.json({ redirect: '/courses' }); // Changed path
         })

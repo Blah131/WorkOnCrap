@@ -6,13 +6,13 @@
     <%- include("./partials/nav.ejs") %>
 
     <div class="details content">
-        <h2><%= course.title %></h2> <!-- Changed blog to course -->
+        <h2><%= course.title %></h2> 
         <div class="content">
-            <p><%= course.duration %></p> <!-- Changed blog.body to course.duration -->
+            <p><%= course.duration %></p> 
         </div>
-        <a class="delete" data-doc="<%= course._id %>">delete</a> <!-- Changed blog to course -->
+        <a class="delete" data-doc="<%= course._id %>">delete</a> 
 
-        <a href="/courses/<%= course._id %>/edit" class="edit-button">Edit Course</a> <!-- Changed blog to course and updated href -->
+        <a href="/courses/<%= course._id %>/edit" class="edit-button">Edit Course</a> >
     </div>
 
     <%- include("./partials/footer.ejs") %>

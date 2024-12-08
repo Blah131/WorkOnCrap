@@ -4,19 +4,19 @@
 <body>
     <%- include('./partials/nav.ejs') %>
 
-    <div class="edit-course content"> <!-- Changed class from edit-blog to edit-course -->
+    <div class="edit-course content"> 
         <h2>Edit Course</h2>
-        <form action="/courses/<%= course._id %>" method="POST"> <!-- Changed action URL from /blogs to /courses -->
+        <form action="/courses/<%= course._id %>" method="POST"> 
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" value="<%= course.title %>" required>
 
-            <label for="description">Description:</label> <!-- Changed label from Points to Description -->
-            <textarea id="description" name="description" required><%= course.description %></textarea> <!-- Changed id and name from snippet to description -->
+            <label for="description">Description:</label> 
+            <textarea id="description" name="description" required><%= course.description %></textarea> 
 
-            <label for="duration">Duration:</label> <!-- Changed label from explanation to Duration -->
-            <textarea id="duration" name="duration" required><%= course.duration %></textarea> <!-- Changed id and name from body to duration -->
+            <label for="duration">Duration:</label> 
+            <textarea id="duration" name="duration" required><%= course.duration %></textarea> 
 
-            <button type="submit">Update Course</button> <!-- Changed text from Update Blog to Update Course -->
+            <button type="submit">Update Course</button> 
         </form>
     </div>
 

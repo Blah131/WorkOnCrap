@@ -55,13 +55,13 @@ h3 {
 }
 
 /* index styles */
-.courses a { /* Changed from .blogs to .courses */
+.courses a { 
     display: block;
     margin: 40px 0;
     padding-left: 30px;
     
 }
-.courses a:hover h3 { /* Changed from .blogs to .courses */
+.courses a:hover h3 { 
     color: crimson;
 }
 
@@ -88,25 +88,25 @@ h3 {
     margin-left: 20px;
 }
 
-.create-course form { /* Changed from .create-blog to .create-course */
+.create-course form { 
     max-width: 400px;
     margin: 0 auto;
 }
-.create-course input, /* Changed from .create-blog to .create-course */
-.create-course textarea { /* Changed from .create-blog to .create-course */
+.create-course input, 
+.create-course textarea { 
     display: block;
     width: 100%;
     margin: 10px 0;
     padding: 8px;
 }
-.create-course label { /* Changed from .create-blog to .create-course */
+.create-course label { 
     display: block;
     margin-top: 24px;
 }
 textarea {
     height: 120px;
 }
-.create-course button { /* Changed from .create-blog to .create-course */
+.create-course button { 
     margin-top: 20px;
     background: crimson;
     color: white;

@@ -7,17 +7,17 @@
 
   <%- include('./partials/nav.ejs') %>
 
-  <div class="create-course content"> <!-- Changed class from create-blog to create-course -->
-    <form action="/courses" method="POST"> <!-- Changed action URL from /blogs to /courses -->
+  <div class="create-course content"> 
+    <form action="/courses" method="POST"> 
     
         <label for="title">Course Title:</label>
         <input type="text" id="title" name="title" required>
         
-        <label for="description">Course Description:</label> <!-- Changed label from Blog snippet to Course Description -->
-        <input type="text" id="description" name="description" required> <!-- Changed name from snippet to description -->
+        <label for="description">Course Description:</label> 
+        <input type="text" id="description" name="description" required> 
         
-        <label for="duration">Course Duration:</label> <!-- Changed label from Course explanation to Course Duration -->
-        <textarea id="duration" name="duration" required></textarea> <!-- Changed id and name from body to duration -->
+        <label for="duration">Course Duration:</label> 
+        <textarea id="duration" name="duration" required></textarea> 
         
         <button>Submit</button>
     </form>
